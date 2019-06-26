@@ -217,7 +217,7 @@ def _stage_in_api(dst, fspec, trace_report):
 
     # init. download client
     from rucio.client.downloadclient import DownloadClient
-    download_client = DownloadClient(logger=logger)
+    download_client = DownloadClient()
 
     # traces are switched off
     if hasattr(download_client, 'tracing'):
@@ -259,7 +259,7 @@ def _stage_out_api(fspec, summary_file_path, trace_report):
 
     # init. download client
     from rucio.client.uploadclient import UploadClient
-    upload_client = UploadClient(logger=logger)
+    upload_client = UploadClient()
 
     # traces are turned off
     if hasattr(upload_client, 'tracing'):
